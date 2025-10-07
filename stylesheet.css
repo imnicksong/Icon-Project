@@ -1,0 +1,225 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+
+html, body {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+    background-color: #EAE6E5;
+}
+
+.headline {
+    display: grid;
+    margin: auto;
+    text-align: left;
+    font-family: "arya-single", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #496A81;
+    color: white;
+    width: 100%;
+    h1 {
+      font-size: 4em;
+      padding-left: 3%;
+    }
+    h2 {
+      font-size: 2em;
+      padding-top: 1%;
+      padding-left: 3%;
+    }
+    img {
+      width: 70%;
+      padding: 3%;
+      margin: 0 auto;
+    }
+}
+
+.storyText {
+    display: grid;
+    padding: 5% 3%;
+    h3 {
+      font-size: 2em;
+      text-align: center;
+      padding: 4%;
+      color: #496A81;
+    }
+    img {
+      margin: 0 auto;
+      clear: both;
+      place-items: center;
+      max-width: 35%;
+      padding-bottom: 3%;
+    }
+    p{
+      font-size: 1.4em;
+      text-align:justify;
+      font-family: "transat", sans-serif;
+      font-weight: 300;
+    }
+}
+
+.container .icon {
+  float: none;
+  display: block;
+  margin: 0 auto;
+  max-width: 35%;
+}
+
+.sectionHeading {
+    font-family: "transat", sans-serif;;
+    font-size: 2em;
+    text-align: center;
+    padding: 1.5% 0;
+    margin-bottom: 0.5%;
+    color: #496A81;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3% 5%;
+    background-color: #8FCB9B;
+    justify-content: center;
+    margin-top: 4%;
+}
+
+.icon {
+    margin: 0 auto;
+    clear: both;
+    max-width: 50%;
+    padding-bottom: 2%;
+    padding-top: 3%
+}
+
+.containerText{
+  h3 {
+    font-family: "transat", sans-serif;
+    font-weight: 300;
+    font-size: 2em;
+    text-align: center;
+    padding: 4%;
+    color: #496A81;
+  }
+  p {
+    font-family: "transat", sans-serif;
+    font-weight: 300;
+    font-size: 1.4em;
+  }
+  ul{
+    font-family: "transat", sans-serif;
+    font-weight: 300;
+    font-size: 1.7em;
+    padding:5%;
+  }
+}
+
+}
+
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+@media(min-width: 681px) {
+    /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+.container img{
+    max-width: 40%;
+    display:block;
+    margin:0 auto;
+}
+}
+
+/*********************************************************************
+  YOUR DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+@media(min-width: 729px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 729px or larger -- so desktop */
+
+.headline {
+  display:grid;
+  max-height: fit-content;
+  padding: 1%;
+  text-align: center;
+  font-family: "arya-single", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  h1{
+    font-size: 3em;
+    padding-bottom: 1%;
+  }
+  img{
+    max-width: 35%;
+    place-items: center;
+  }
+}
+
+.sectionHeading {
+  font-size: 2em;
+  text-align: center;
+  padding: 1% 0;
+  margin-bottom: 0.5%;
+  color: #496A81;
+}
+
+.storyText {
+    padding: 5% 6% 2%;
+    font-size: 1em;
+    img {
+      margin: 0 auto;
+      clear: both;
+      max-width: 15%;
+      padding-bottom: 1%;
+    }
+    p{
+      font-size: 1.7em;
+      text-align: justify;
+    }
+}
+
+.container {
+  margin: 1%;
+  width: 45%;
+  min-height: 100%;
+  
+}
+
+.containerRow{
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  align-items: stretch;
+  width: 100%; 
+}
+
+.containerText{
+  h3 {
+    font-size: 3em;
+  }
+  p {
+    font-size: 1.4em;
+    text-align: justify;
+  }
+  li {
+    font-size: 1.7em;
+  }
+}
+
+}
